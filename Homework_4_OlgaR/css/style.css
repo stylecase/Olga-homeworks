@@ -1,0 +1,258 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #000;
+     background-color: #f0efef;
+     font-size: 24px;
+     line-height: 1.4;
+     font-family:  'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+
+/* full width bar Use percentage to make it responsive*/
+header{
+  width:100%;
+  background-color: #033048;
+  height: 120px;
+  position: relative;
+}
+/* Parent container for 2 childeren */
+.header-content{
+  padding-left: 10%;
+  padding-right: 10%;
+  display:flex;
+  justify-content: space-between;
+  height: 120px;
+  align-items: center;
+  position: relative;
+}
+.logo{
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+  position: relative;
+}
+.navigation{
+  display: flex;
+}
+
+.main-nav{
+  padding-left: 50px;
+  color: #F7D306;
+  font-size: 24px;
+  font-weight: 300;
+  text-decoration: none;
+}
+.main-nav:hover{
+  color:white;
+}
+/* Center the container Parent of 2 divs */
+.center-container {
+  width: calc(100% - 20%);
+  margin: auto;
+  display: flex;
+}
+
+.left-column{
+  padding-right: 5%;
+  width: 75%;
+}
+.right-column{
+  width: 25%;
+}
+/* Media Queries Break point at 980px. Percentages fixed text wrap inside the flexbox children */
+@media screen and (max-width: 980px){
+  .center-container{
+    width:100%;
+    flex-direction: column;
+    padding: 0 5% 5% 5%;
+  }
+  .right-column{
+    width: 100%;
+  }
+  .left-column{
+    padding-right: 0;
+    width: 100%;
+  }
+}
+
+h1{
+  padding-top: 50px;
+  font-weight: 600;
+  font-size: 40px;
+  color: #033048;
+}
+/* Drop cap effect */
+.drop-cap-para{
+  font-size: 24px;
+  color: #606161;
+  overflow:hidden;
+}
+.drop-cap-para:first-letter {
+  color: #903;
+  float: left;
+  font-size: 85px;
+  font-weight: 600;
+  line-height: 80px;
+  padding-right: 10px;
+}
+/* Set display to hidden in order function to work*/
+.hidden-para{
+  color: #606161;
+  margin-top: 30px;
+  display:none;
+}
+img{
+  margin:25px 0 25px 0;
+  max-width: 100%;
+}
+.read-more, .read-less{
+  font-size: 24px;
+  font-weight: 600;
+  color:#033048;
+  margin-top: 20px;
+  text-align: right;
+}
+.hide{
+  display:none;
+}
+
+h2{
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #033048;
+}
+a{
+  text-decoration: none;
+  color: #033048;;
+}
+a:hover {
+    color:  #903;
+}
+li{
+  font-size: 24px;
+  list-style: none;
+}
+.sidebar-body{
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+#learn-more{
+  font-size: 22px;
+  font-weight: 600;
+  color: #033048;
+  margin-top: 10px;
+}
+
+.cta-container{
+  background-color: #F7D306;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.cta-container:hover{
+  color:red;
+}
+button.cta-button{
+  border: none;
+  background-color: #033048;
+  color: white;
+  width: 300px;
+  height:60px;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding: 18px 0 18px 0;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.cta-button:hover{
+  background-color: #903;
+}
+footer {
+  height: 300px;
+  background-color: #121212;
+  text-align: center;
+}
+.footer-company{
+  color: #f9e42e;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-weight: 800;
+  font-size: 40px;
+}
+.social-media{
+  margin: 20px;
+}
+.copyright-text{
+  margin-top: 30px;
+  color:white;
+  font-weight: 600;
+  font-size: 20px;
+}
+sup {
+      vertical-align: super;
+      font-size: smaller;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
