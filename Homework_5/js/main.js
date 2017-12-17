@@ -9,10 +9,11 @@ if city name is not in the list then go to default image
 $(document).ready(function(){
   $("#city-form").submit(function() {
      event.preventDefault();
-     //remove extra spacing with .trim
+     //.trim remove extra spacing with
+     //.toLowerCase converts to lower case and compares to the values
      var cityName = $("input:text").val().trim().toLowerCase();
      //var cityName = $("#city-type").val();
-     // remove all the classes if we use remove and add method
+     // Alternative method: remove all the classes if we use remove and add method
      //$('body').removeClass(); and then add class
      if (cityName === "nyc" || cityName === "new york" || cityName === "new york city" || cityName === "ny"){
       $("body").css("background-image" , "url(images/nyc.jpg");
@@ -34,6 +35,7 @@ $(document).ready(function(){
     else {$("body").css("background-image", "url(images/citipix_skyline.jpg)");
       console.log('You city is not here');
     }
+    //reset to default placeholder text after user entered value
     $("#city-form")[0].reset();
   });
 });
